@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>3D Matematik Quiz</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="container">
+            <div class="quiz-box">
+                <div class="front">
+                    <h1>Matematik Quiz</h1>
+                    <div id="progress-bar"></div>
+                    <div id="score">Puan: <span id="score-value">0</span></div>
+                    <div id="question"></div>
+                    <div id="options" class="options-grid">
+                        <button class="option option-3d" onclick="window.quizGame.checkAnswer(0)"></button>
+                        <button class="option option-3d" onclick="window.quizGame.checkAnswer(1)"></button>
+                        <button class="option option-3d" onclick="window.quizGame.checkAnswer(2)"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/mathUtils.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/quizGame.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
