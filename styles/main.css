@@ -1,1 +1,94 @@
+/* Mevcut stiller korunacak */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
 
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 3px solid #ff0000; /* Canlı kırmızı border */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2); /* Kırmızı gölge */
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+h1 {
+    color: #ff0000; /* Canlı kırmızı başlık */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.2);
+}
+
+/* Diğer stiller aynı kalacak */
+#question {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+}
+
+.question-highlight {
+    display: inline-block;
+    animation: questionPulse 2s infinite;
+}
+
+@keyframes questionPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#score {
+    font-size: 18px;
+    color: #27ae60;
+    margin-bottom: 1rem;
+}
+
+.options-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.option {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid #ff0000; /* Canlı kırmızı border */
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.1); /* Kırmızı gölge */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.option:hover {
+    transform: translateY(-2px) perspective(1000px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2); /* Kırmızı hover gölge */
+    border-color: #ff3333; /* Hover durumunda daha açık kırmızı */
+}
+
+.option.correct {
+    background-color: #2ecc71;
+    color: white;
+    border-color: #2ecc71;
+}
+
+.option.wrong {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
