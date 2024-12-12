@@ -1,0 +1,77 @@
+/* Mevcut animasyonlar korunacak */
+@keyframes float {
+    0% { transform: translateZ(50px); }
+    50% { transform: translateZ(70px); }
+    100% { transform: translateZ(50px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Emoji animasyonları */
+@keyframes emojiAppear {
+    0% { 
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1.5);  /* 1.2'den 1.5'e çıkarıldı */
+    }
+    100% { 
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes emojiShake {
+    0% { 
+        opacity: 0;
+        transform: scale(0) translateX(0);
+    }
+    25% { 
+        opacity: 1;
+        transform: scale(1.5) translateX(-10px);  /* 1'den 1.5'e çıkarıldı */
+    }
+    50% { 
+        transform: scale(1.5) translateX(10px);   /* 1'den 1.5'e çıkarıldı */
+    }
+    75% { 
+        transform: scale(1.5) translateX(-10px);  /* 1'den 1.5'e çıkarıldı */
+    }
+    100% { 
+        opacity: 0;
+        transform: scale(0) translateX(0);
+    }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+.pulse {
+    animation: pulse 0.5s ease-in-out;
+}
+
+.emoji-feedback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;  /* 2rem'den 3rem'e çıkarıldı */
+    pointer-events: none;
+    z-index: 1000;
+}
